@@ -1,0 +1,480 @@
+// -----------------------------------------------------------------------------
+// Display プロパティ
+// -----------------------------------------------------------------------------
+
+.d-none {
+  display: none !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.d-inline-grid {
+  display: inline-grid !important;
+}
+
+.d-table {
+  display: table !important;
+}
+
+.d-table-row {
+  display: table-row !important;
+}
+
+.d-table-cell {
+  display: table-cell !important;
+}
+
+.d-contents {
+  display: contents !important;
+}
+
+.d-list-item {
+  display: list-item !important;
+}
+
+// -----------------------------------------------------------------------------
+// Visibility プロパティ
+// -----------------------------------------------------------------------------
+
+.visible {
+  visibility: visible !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+// -----------------------------------------------------------------------------
+// Overflow プロパティ
+// -----------------------------------------------------------------------------
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.overflow-scroll {
+  overflow: scroll !important;
+}
+
+.overflow-clip {
+  overflow: clip !important;
+}
+
+// X軸方向のoverflow
+.overflow-x-auto {
+  overflow-x: auto !important;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+.overflow-x-visible {
+  overflow-x: visible !important;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll !important;
+}
+
+.overflow-x-clip {
+  overflow-x: clip !important;
+}
+
+// Y軸方向のoverflow
+.overflow-y-auto {
+  overflow-y: auto !important;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+
+.overflow-y-visible {
+  overflow-y: visible !important;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll !important;
+}
+
+.overflow-y-clip {
+  overflow-y: clip !important;
+}
+
+// -----------------------------------------------------------------------------
+// Opacity プロパティ
+// -----------------------------------------------------------------------------
+
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.opacity-25 {
+  opacity: 0.25 !important;
+}
+
+.opacity-50 {
+  opacity: 0.5 !important;
+}
+
+.opacity-75 {
+  opacity: 0.75 !important;
+}
+
+.opacity-100 {
+  opacity: 1 !important;
+}
+
+// -----------------------------------------------------------------------------
+// Position プロパティ
+// -----------------------------------------------------------------------------
+
+.position-static {
+  position: static !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+.position-sticky {
+  position: sticky !important;
+}
+
+// 位置指定のエイリアス
+.relative {
+  position: relative !important;
+}
+
+.absolute {
+  position: absolute !important;
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+.sticky {
+  position: sticky !important;
+}
+
+// -----------------------------------------------------------------------------
+// Z-index プロパティ
+// -----------------------------------------------------------------------------
+
+.z-0 {
+  z-index: 0 !important;
+}
+
+.z-10 {
+  z-index: 10 !important;
+}
+
+.z-20 {
+  z-index: 20 !important;
+}
+
+.z-30 {
+  z-index: 30 !important;
+}
+
+.z-40 {
+  z-index: 40 !important;
+}
+
+.z-50 {
+  z-index: 50 !important;
+}
+
+.z-auto {
+  z-index: auto !important;
+}
+
+.z-negative {
+  z-index: -1 !important;
+}
+
+.z-modal {
+  z-index: 1000 !important;
+}
+
+.z-popover {
+  z-index: 1010 !important;
+}
+
+.z-tooltip {
+  z-index: 1020 !important;
+}
+
+.z-dropdown {
+  z-index: 1030 !important;
+}
+
+.z-navbar {
+  z-index: 1040 !important;
+}
+
+.z-overlay {
+  z-index: 1050 !important;
+}
+
+// -----------------------------------------------------------------------------
+// Float プロパティ
+// -----------------------------------------------------------------------------
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+// Clear プロパティ
+.clear-left {
+  clear: left !important;
+}
+
+.clear-right {
+  clear: right !important;
+}
+
+.clear-both {
+  clear: both !important;
+}
+
+.clear-none {
+  clear: none !important;
+}
+
+// Clearfix
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// -----------------------------------------------------------------------------
+// Object-fit プロパティ（画像・動画用）
+// -----------------------------------------------------------------------------
+
+.object-contain {
+  object-fit: contain !important;
+}
+
+.object-cover {
+  object-fit: cover !important;
+}
+
+.object-fill {
+  object-fit: fill !important;
+}
+
+.object-none {
+  object-fit: none !important;
+}
+
+.object-scale-down {
+  object-fit: scale-down !important;
+}
+
+// Object-position プロパティ
+.object-center {
+  object-position: center !important;
+}
+
+.object-top {
+  object-position: top !important;
+}
+
+.object-bottom {
+  object-position: bottom !important;
+}
+
+.object-left {
+  object-position: left !important;
+}
+
+.object-right {
+  object-position: right !important;
+}
+
+// -----------------------------------------------------------------------------
+// 印刷時の表示制御
+// -----------------------------------------------------------------------------
+
+@media print {
+  .d-print-none {
+    display: none !important;
+  }
+  
+  .d-print-inline {
+    display: inline !important;
+  }
+  
+  .d-print-inline-block {
+    display: inline-block !important;
+  }
+  
+  .d-print-block {
+    display: block !important;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// レスポンシブ対応 - Small (sm) 576px以上
+// -----------------------------------------------------------------------------
+
+@media (min-width: 576px) {
+  .d-sm-none { display: none !important; }
+  .d-sm-inline { display: inline !important; }
+  .d-sm-inline-block { display: inline-block !important; }
+  .d-sm-block { display: block !important; }
+  .d-sm-flex { display: flex !important; }
+  .d-sm-inline-flex { display: inline-flex !important; }
+  .d-sm-grid { display: grid !important; }
+  .d-sm-inline-grid { display: inline-grid !important; }
+}
+
+// -----------------------------------------------------------------------------
+// レスポンシブ対応 - Medium (md) 768px以上
+// -----------------------------------------------------------------------------
+
+@media (min-width: 768px) {
+  .d-md-none { display: none !important; }
+  .d-md-inline { display: inline !important; }
+  .d-md-inline-block { display: inline-block !important; }
+  .d-md-block { display: block !important; }
+  .d-md-flex { display: flex !important; }
+  .d-md-inline-flex { display: inline-flex !important; }
+  .d-md-grid { display: grid !important; }
+  .d-md-inline-grid { display: inline-grid !important; }
+}
+
+// -----------------------------------------------------------------------------
+// レスポンシブ対応 - Large (lg) 1024px以上
+// -----------------------------------------------------------------------------
+
+@media (min-width: 1024px) {
+  .d-lg-none { display: none !important; }
+  .d-lg-inline { display: inline !important; }
+  .d-lg-inline-block { display: inline-block !important; }
+  .d-lg-block { display: block !important; }
+  .d-lg-flex { display: flex !important; }
+  .d-lg-inline-flex { display: inline-flex !important; }
+  .d-lg-grid { display: grid !important; }
+  .d-lg-inline-grid { display: inline-grid !important; }
+}
+
+// -----------------------------------------------------------------------------
+// レスポンシブ対応 - Extra Large (xl) 1280px以上
+// -----------------------------------------------------------------------------
+
+@media (min-width: 1280px) {
+  .d-xl-none { display: none !important; }
+  .d-xl-inline { display: inline !important; }
+  .d-xl-inline-block { display: inline-block !important; }
+  .d-xl-block { display: block !important; }
+  .d-xl-flex { display: flex !important; }
+  .d-xl-inline-flex { display: inline-flex !important; }
+  .d-xl-grid { display: grid !important; }
+  .d-xl-inline-grid { display: inline-grid !important; }
+}
+
+// -----------------------------------------------------------------------------
+// 特殊な表示制御
+// -----------------------------------------------------------------------------
+
+// スクリーンリーダー専用（視覚的に隠すが読み上げ可能）
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// フォーカス時のみ表示（スキップリンクなど）
+.sr-only-focusable:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: inherit !important;
+  margin: inherit !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+}
+
+// 要素を画面外に移動（アニメーション用）
+.offscreen {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+}
+
+// 表示・非表示のトランジション用
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
