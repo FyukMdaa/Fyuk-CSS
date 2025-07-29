@@ -1,0 +1,337 @@
+// ===================================
+// Container（コンテナ）
+// ===================================
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $spacing-4;
+  padding-right: $spacing-4;
+  
+  // レスポンシブなmax-width
+  @media (min-width: $mobile) {
+    max-width: $mobile;
+    padding-left: $spacing-6;
+    padding-right: $spacing-6;
+  }
+  
+  @media (min-width: $tablet) {
+    max-width: $tablet;
+  }
+  
+  @media (min-width: $desktop) {
+    max-width: $desktop;
+  }
+  
+  @media (min-width: $wide) {
+    max-width: $wide;
+  }
+}
+
+// フルサイズコンテナ
+.container-fluid {
+  width: 100%;
+  padding-left: $spacing-4;
+  padding-right: $spacing-4;
+  
+  @media (min-width: $mobile) {
+    padding-left: $spacing-6;
+    padding-right: $spacing-6;
+  }
+}
+
+// ===================================
+// Display（表示方法）
+// ===================================
+
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+.inline-grid { display: inline-grid; }
+.table { display: table; }
+.table-cell { display: table-cell; }
+.table-row { display: table-row; }
+.hidden { display: none; }
+
+// レスポンシブ表示
+@include mobile {
+  .mobile\:block { display: block; }
+  .mobile\:inline-block { display: inline-block; }
+  .mobile\:inline { display: inline; }
+  .mobile\:flex { display: flex; }
+  .mobile\:inline-flex { display: inline-flex; }
+  .mobile\:grid { display: grid; }
+  .mobile\:hidden { display: none; }
+}
+
+@include tablet {
+  .tablet\:block { display: block; }
+  .tablet\:inline-block { display: inline-block; }
+  .tablet\:inline { display: inline; }
+  .tablet\:flex { display: flex; }
+  .tablet\:inline-flex { display: inline-flex; }
+  .tablet\:grid { display: grid; }
+  .tablet\:hidden { display: none; }
+}
+
+// ===================================
+// Flexbox（フレックスボックス）
+// ===================================
+
+// Flex Direction
+.flex-row { flex-direction: row; }
+.flex-row-reverse { flex-direction: row-reverse; }
+.flex-col { flex-direction: column; }
+.flex-col-reverse { flex-direction: column-reverse; }
+
+// Flex Wrap
+.flex-wrap { flex-wrap: wrap; }
+.flex-wrap-reverse { flex-wrap: wrap-reverse; }
+.flex-nowrap { flex-wrap: nowrap; }
+
+// Justify Content（主軸の配置）
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-evenly { justify-content: space-evenly; }
+
+// Align Items（交差軸の配置）
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.items-center { align-items: center; }
+.items-baseline { align-items: baseline; }
+.items-stretch { align-items: stretch; }
+
+// Align Self（個別の交差軸配置）
+.self-auto { align-self: auto; }
+.self-start { align-self: flex-start; }
+.self-end { align-self: flex-end; }
+.self-center { align-self: center; }
+.self-stretch { align-self: stretch; }
+
+// Flex Grow / Shrink
+.flex-1 { flex: 1 1 0%; }
+.flex-auto { flex: 1 1 auto; }
+.flex-initial { flex: 0 1 auto; }
+.flex-none { flex: none; }
+
+.flex-grow { flex-grow: 1; }
+.flex-grow-0 { flex-grow: 0; }
+
+.flex-shrink { flex-shrink: 1; }
+.flex-shrink-0 { flex-shrink: 0; }
+
+// よく使うFlexパターン
+.flex-center {
+  @include flex-center;
+}
+
+.flex-between {
+  @include flex-between;
+}
+
+.flex-col-center {
+  @include flex-column;
+  align-items: center;
+}
+
+// ===================================
+// CSS Grid（グリッド）
+// ===================================
+
+// Grid Template Columns
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+
+// Grid Template Rows
+.grid-rows-1 { grid-template-rows: repeat(1, minmax(0, 1fr)); }
+.grid-rows-2 { grid-template-rows: repeat(2, minmax(0, 1fr)); }
+.grid-rows-3 { grid-template-rows: repeat(3, minmax(0, 1fr)); }
+.grid-rows-4 { grid-template-rows: repeat(4, minmax(0, 1fr)); }
+
+// Grid Column Span
+.col-span-1 { grid-column: span 1 / span 1; }
+.col-span-2 { grid-column: span 2 / span 2; }
+.col-span-3 { grid-column: span 3 / span 3; }
+.col-span-4 { grid-column: span 4 / span 4; }
+.col-span-5 { grid-column: span 5 / span 5; }
+.col-span-6 { grid-column: span 6 / span 6; }
+.col-span-full { grid-column: 1 / -1; }
+
+// Grid Row Span
+.row-span-1 { grid-row: span 1 / span 1; }
+.row-span-2 { grid-row: span 2 / span 2; }
+.row-span-3 { grid-row: span 3 / span 3; }
+.row-span-4 { grid-row: span 4 / span 4; }
+.row-span-full { grid-row: 1 / -1; }
+
+// Grid Gap
+.gap-0 { gap: 0; }
+.gap-1 { gap: $spacing-1; }
+.gap-2 { gap: $spacing-2; }
+.gap-3 { gap: $spacing-3; }
+.gap-4 { gap: $spacing-4; }
+.gap-5 { gap: $spacing-5; }
+.gap-6 { gap: $spacing-6; }
+.gap-8 { gap: $spacing-8; }
+
+// Grid Place Items
+.place-items-start { place-items: start; }
+.place-items-end { place-items: end; }
+.place-items-center { place-items: center; }
+.place-items-stretch { place-items: stretch; }
+
+// ===================================
+// Position（配置）
+// ===================================
+
+.static { position: static; }
+.fixed { position: fixed; }
+.absolute { position: absolute; }
+.relative { position: relative; }
+.sticky { position: sticky; }
+
+// Position値（top、right、bottom、left）
+.top-0 { top: 0; }
+.top-1 { top: $spacing-1; }
+.top-2 { top: $spacing-2; }
+.top-4 { top: $spacing-4; }
+.top-auto { top: auto; }
+
+.right-0 { right: 0; }
+.right-1 { right: $spacing-1; }
+.right-2 { right: $spacing-2; }
+.right-4 { right: $spacing-4; }
+.right-auto { right: auto; }
+
+.bottom-0 { bottom: 0; }
+.bottom-1 { bottom: $spacing-1; }
+.bottom-2 { bottom: $spacing-2; }
+.bottom-4 { bottom: $spacing-4; }
+.bottom-auto { bottom: auto; }
+
+.left-0 { left: 0; }
+.left-1 { left: $spacing-1; }
+.left-2 { left: $spacing-2; }
+.left-4 { left: $spacing-4; }
+.left-auto { left: auto; }
+
+// 中央配置
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.inset-center {
+  @include absolute-center;
+}
+
+// ===================================
+// Overflow（オーバーフロー）
+// ===================================
+
+.overflow-auto { overflow: auto; }
+.overflow-hidden { overflow: hidden; }
+.overflow-visible { overflow: visible; }
+.overflow-scroll { overflow: scroll; }
+
+.overflow-x-auto { overflow-x: auto; }
+.overflow-x-hidden { overflow-x: hidden; }
+.overflow-x-visible { overflow-x: visible; }
+.overflow-x-scroll { overflow-x: scroll; }
+
+.overflow-y-auto { overflow-y: auto; }
+.overflow-y-hidden { overflow-y: hidden; }
+.overflow-y-visible { overflow-y: visible; }
+.overflow-y-scroll { overflow-y: scroll; }
+
+// ===================================
+// Visibility（可視性）
+// ===================================
+
+.visible { visibility: visible; }
+.invisible { visibility: hidden; }
+
+// ===================================
+// Z-Index（重ね順）
+// ===================================
+
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+.z-auto { z-index: auto; }
+
+// ===================================
+// Float（古いレイアウト用）
+// ===================================
+
+.float-right { float: right; }
+.float-left { float: left; }
+.float-none { float: none; }
+
+.clearfix {
+  @include clearfix;
+}
+
+// ===================================
+// Object Fit（画像・動画の収まり方）
+// ===================================
+
+.object-contain { object-fit: contain; }
+.object-cover { object-fit: cover; }
+.object-fill { object-fit: fill; }
+.object-none { object-fit: none; }
+.object-scale-down { object-fit: scale-down; }
+
+// Object Position
+.object-bottom { object-position: bottom; }
+.object-center { object-position: center; }
+.object-left { object-position: left; }
+.object-left-bottom { object-position: left bottom; }
+.object-left-top { object-position: left top; }
+.object-right { object-position: right; }
+.object-right-bottom { object-position: right bottom; }
+.object-right-top { object-position: right top; }
+.object-top { object-position: top; }
+
+// ===================================
+// レスポンシブ用のgridクラス
+// ===================================
+
+@include mobile {
+  .mobile\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  .mobile\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mobile\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  
+  .mobile\:col-span-1 { grid-column: span 1 / span 1; }
+  .mobile\:col-span-2 { grid-column: span 2 / span 2; }
+  .mobile\:col-span-full { grid-column: 1 / -1; }
+}
+
+@include tablet {
+  .tablet\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  .tablet\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tablet\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .tablet\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  
+  .tablet\:col-span-1 { grid-column: span 1 / span 1; }
+  .tablet\:col-span-2 { grid-column: span 2 / span 2; }
+  .tablet\:col-span-3 { grid-column: span 3 / span 3; }
+  .tablet\:col-span-full { grid-column: 1 / -1; }
+}
