@@ -1,0 +1,348 @@
+// ===================================
+// スペーシングのマップ定義
+// ===================================
+
+$spacing-values: (
+  0: 0,
+  1: $spacing-1,    // 4px
+  2: $spacing-2,    // 8px
+  3: $spacing-3,    // 12px
+  4: $spacing-4,    // 16px
+  5: $spacing-5,    // 20px
+  6: $spacing-6,    // 24px
+  8: $spacing-8,    // 32px
+  10: $spacing-10,  // 40px
+  12: $spacing-12,  // 48px
+  16: $spacing-16,  // 64px
+  auto: auto
+);
+
+// ===================================
+// Margin（マージン）クラス生成
+// ===================================
+
+// 全方向のマージン
+@each $key, $value in $spacing-values {
+  .m-#{$key} { margin: $value; }
+}
+
+// 上下のマージン
+@each $key, $value in $spacing-values {
+  .my-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+}
+
+// 左右のマージン
+@each $key, $value in $spacing-values {
+  .mx-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+}
+
+// 上マージン
+@each $key, $value in $spacing-values {
+  .mt-#{$key} { margin-top: $value; }
+}
+
+// 右マージン
+@each $key, $value in $spacing-values {
+  .mr-#{$key} { margin-right: $value; }
+}
+
+// 下マージン
+@each $key, $value in $spacing-values {
+  .mb-#{$key} { margin-bottom: $value; }
+}
+
+// 左マージン
+@each $key, $value in $spacing-values {
+  .ml-#{$key} { margin-left: $value; }
+}
+
+// ===================================
+// Padding（パディング）クラス生成
+// ===================================
+
+// 全方向のパディング
+@each $key, $value in $spacing-values {
+  @if $key != auto {  // paddingにautoは使えない
+    .p-#{$key} { padding: $value; }
+  }
+}
+
+// 上下のパディング
+@each $key, $value in $spacing-values {
+  @if $key != auto {
+    .py-#{$key} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+  }
+}
+
+// 左右のパディング
+@each $key, $value in $spacing-values {
+  @if $key != auto {
+    .px-#{$key} {
+      padding-left: $value;
+      padding-right: $value;
+    }
+  }
+}
+
+// 上パディング
+@each $key, $value in $spacing-values {
+  @if $key != auto {
+    .pt-#{$key} { padding-top: $value; }
+  }
+}
+
+// 右パディング
+@each $key, $value in $spacing-values {
+  @if $key != auto {
+    .pr-#{$key} { padding-right: $value; }
+  }
+}
+
+// 下パディング
+@each $key, $value in $spacing-values {
+  @if $key != auto {
+    .pb-#{$key} { padding-bottom: $value; }
+  }
+}
+
+// 左パディング
+@each $key, $value in $spacing-values {
+  @if $key != auto {
+    .pl-#{$key} { padding-left: $value; }
+  }
+}
+
+// ===================================
+// ネガティブマージン
+// ===================================
+
+// 負の値のマージン（autoは除外）
+@each $key, $value in $spacing-values {
+  @if $key != auto and $key != 0 {
+    // 全方向
+    .-m-#{$key} { margin: -$value; }
+    
+    // 上下
+    .-my-#{$key} {
+      margin-top: -$value;
+      margin-bottom: -$value;
+    }
+    
+    // 左右
+    .-mx-#{$key} {
+      margin-left: -$value;
+      margin-right: -$value;
+    }
+    
+    // 個別方向
+    .-mt-#{$key} { margin-top: -$value; }
+    .-mr-#{$key} { margin-right: -$value; }
+    .-mb-#{$key} { margin-bottom: -$value; }
+    .-ml-#{$key} { margin-left: -$value; }
+  }
+}
+
+// ===================================
+// Space Between（子要素間のマージン）
+// ===================================
+
+// 横方向の子要素間スペース
+@each $key, $value in $spacing-values {
+  @if $key != auto {
+    .space-x-#{$key} > * + * {
+      margin-left: $value;
+    }
+  }
+}
+
+// 縦方向の子要素間スペース
+@each $key, $value in $spacing-values {
+  @if $key != auto {
+    .space-y-#{$key} > * + * {
+      margin-top: $value;
+    }
+  }
+}
+
+// 負の値の子要素間スペース
+@each $key, $value in $spacing-values {
+  @if $key != auto and $key != 0 {
+    .-space-x-#{$key} > * + * {
+      margin-left: -$value;
+    }
+    
+    .-space-y-#{$key} > * + * {
+      margin-top: -$value;
+    }
+  }
+}
+
+// ===================================
+// Divide（境界線付きスペース）
+// ===================================
+
+// 横方向の境界線
+.divide-x > * + * {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: var(--color-border);
+}
+
+// 縦方向の境界線
+.divide-y > * + * {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--color-border);
+}
+
+// 境界線の太さ
+.divide-x-2 > * + * {
+  border-left-width: 2px;
+}
+
+.divide-y-2 > * + * {
+  border-top-width: 2px;
+}
+
+// 境界線なし
+.divide-x-0 > * + * {
+  border-left-width: 0;
+}
+
+.divide-y-0 > * + * {
+  border-top-width: 0;
+}
+
+// ===================================
+// レスポンシブ対応
+// ===================================
+
+// モバイル用スペーシング
+@include mobile {
+  @each $key, $value in $spacing-values {
+    // Margin
+    .mobile\:m-#{$key} { margin: $value; }
+    .mobile\:my-#{$key} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+    .mobile\:mx-#{$key} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+    .mobile\:mt-#{$key} { margin-top: $value; }
+    .mobile\:mr-#{$key} { margin-right: $value; }
+    .mobile\:mb-#{$key} { margin-bottom: $value; }
+    .mobile\:ml-#{$key} { margin-left: $value; }
+    
+    // Padding（autoを除く）
+    @if $key != auto {
+      .mobile\:p-#{$key} { padding: $value; }
+      .mobile\:py-#{$key} {
+        padding-top: $value;
+        padding-bottom: $value;
+      }
+      .mobile\:px-#{$key} {
+        padding-left: $value;
+        padding-right: $value;
+      }
+      .mobile\:pt-#{$key} { padding-top: $value; }
+      .mobile\:pr-#{$key} { padding-right: $value; }
+      .mobile\:pb-#{$key} { padding-bottom: $value; }
+      .mobile\:pl-#{$key} { padding-left: $value; }
+    }
+  }
+}
+
+// タブレット用スペーシング
+@include tablet {
+  @each $key, $value in $spacing-values {
+    // Margin
+    .tablet\:m-#{$key} { margin: $value; }
+    .tablet\:my-#{$key} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+    .tablet\:mx-#{$key} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+    .tablet\:mt-#{$key} { margin-top: $value; }
+    .tablet\:mr-#{$key} { margin-right: $value; }
+    .tablet\:mb-#{$key} { margin-bottom: $value; }
+    .tablet\:ml-#{$key} { margin-left: $value; }
+    
+    // Padding（autoを除く）
+    @if $key != auto {
+      .tablet\:p-#{$key} { padding: $value; }
+      .tablet\:py-#{$key} {
+        padding-top: $value;
+        padding-bottom: $value;
+      }
+      .tablet\:px-#{$key} {
+        padding-left: $value;
+        padding-right: $value;
+      }
+      .tablet\:pt-#{$key} { padding-top: $value; }
+      .tablet\:pr-#{$key} { padding-right: $value; }
+      .tablet\:pb-#{$key} { padding-bottom: $value; }
+      .tablet\:pl-#{$key} { padding-left: $value; }
+    }
+  }
+}
+
+// ===================================
+// よく使うスペーシングパターン
+// ===================================
+
+// セクション間のスペース
+.section-spacing {
+  margin-top: $spacing-16;
+  margin-bottom: $spacing-16;
+  
+  @include mobile {
+    margin-top: $spacing-8;
+    margin-bottom: $spacing-8;
+  }
+}
+
+// カード間のスペース
+.card-spacing {
+  margin-bottom: $spacing-6;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// コンテンツエリアのパディング
+.content-padding {
+  padding: $spacing-6;
+  
+  @include mobile {
+    padding: $spacing-4;
+  }
+}
+
+// 狭いパディング
+.tight-padding {
+  padding: $spacing-2 $spacing-3;
+}
+
+// 広いパディング
+.loose-padding {
+  padding: $spacing-8 $spacing-12;
+  
+  @include mobile {
+    padding: $spacing-6 $spacing-8;
+  }
+}
