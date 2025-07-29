@@ -1,0 +1,455 @@
+// -----------------------------------------------------------------------------
+// 背景色ユーティリティ
+// -----------------------------------------------------------------------------
+
+// プライマリカラー
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-light) !important;
+}
+
+.bg-primary-dark {
+  background-color: var(--color-primary-dark) !important;
+}
+
+// セカンダリカラー
+.bg-secondary {
+  background-color: var(--color-secondary) !important;
+}
+
+.bg-secondary-light {
+  background-color: var(--color-secondary-light) !important;
+}
+
+.bg-secondary-dark {
+  background-color: var(--color-secondary-dark) !important;
+}
+
+// 成功・エラー・警告・情報
+.bg-success {
+  background-color: var(--color-success) !important;
+}
+
+.bg-error {
+  background-color: var(--color-error) !important;
+}
+
+.bg-warning {
+  background-color: var(--color-warning) !important;
+}
+
+.bg-info {
+  background-color: var(--color-info) !important;
+}
+
+// グレースケール
+.bg-white {
+  background-color: var(--color-white) !important;
+}
+
+.bg-black {
+  background-color: var(--color-black) !important;
+}
+
+.bg-gray-100 {
+  background-color: var(--color-gray-100) !important;
+}
+
+.bg-gray-200 {
+  background-color: var(--color-gray-200) !important;
+}
+
+.bg-gray-300 {
+  background-color: var(--color-gray-300) !important;
+}
+
+.bg-gray-400 {
+  background-color: var(--color-gray-400) !important;
+}
+
+.bg-gray-500 {
+  background-color: var(--color-gray-500) !important;
+}
+
+.bg-gray-600 {
+  background-color: var(--color-gray-600) !important;
+}
+
+.bg-gray-700 {
+  background-color: var(--color-gray-700) !important;
+}
+
+.bg-gray-800 {
+  background-color: var(--color-gray-800) !important;
+}
+
+.bg-gray-900 {
+  background-color: var(--color-gray-900) !important;
+}
+
+// 透明背景
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+// -----------------------------------------------------------------------------
+// 文字色ユーティリティ
+// -----------------------------------------------------------------------------
+
+// プライマリカラー
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.text-primary-light {
+  color: var(--color-primary-light) !important;
+}
+
+.text-primary-dark {
+  color: var(--color-primary-dark) !important;
+}
+
+// セカンダリカラー
+.text-secondary {
+  color: var(--color-secondary) !important;
+}
+
+.text-secondary-light {
+  color: var(--color-secondary-light) !important;
+}
+
+.text-secondary-dark {
+  color: var(--color-secondary-dark) !important;
+}
+
+// 成功・エラー・警告・情報
+.text-success {
+  color: var(--color-success) !important;
+}
+
+.text-error {
+  color: var(--color-error) !important;
+}
+
+.text-warning {
+  color: var(--color-warning) !important;
+}
+
+.text-info {
+  color: var(--color-info) !important;
+}
+
+// グレースケール
+.text-white {
+  color: var(--color-white) !important;
+}
+
+.text-black {
+  color: var(--color-black) !important;
+}
+
+.text-gray-100 {
+  color: var(--color-gray-100) !important;
+}
+
+.text-gray-200 {
+  color: var(--color-gray-200) !important;
+}
+
+.text-gray-300 {
+  color: var(--color-gray-300) !important;
+}
+
+.text-gray-400 {
+  color: var(--color-gray-400) !important;
+}
+
+.text-gray-500 {
+  color: var(--color-gray-500) !important;
+}
+
+.text-gray-600 {
+  color: var(--color-gray-600) !important;
+}
+
+.text-gray-700 {
+  color: var(--color-gray-700) !important;
+}
+
+.text-gray-800 {
+  color: var(--color-gray-800) !important;
+}
+
+.text-gray-900 {
+  color: var(--color-gray-900) !important;
+}
+
+// 継承色
+.text-inherit {
+  color: inherit !important;
+}
+
+// 透明色
+.text-transparent {
+  color: transparent !important;
+}
+
+// -----------------------------------------------------------------------------
+// ボーダー色ユーティリティ
+// -----------------------------------------------------------------------------
+
+// プライマリカラー
+.border-primary {
+  border-color: var(--color-primary) !important;
+}
+
+.border-primary-light {
+  border-color: var(--color-primary-light) !important;
+}
+
+.border-primary-dark {
+  border-color: var(--color-primary-dark) !important;
+}
+
+// セカンダリカラー
+.border-secondary {
+  border-color: var(--color-secondary) !important;
+}
+
+.border-secondary-light {
+  border-color: var(--color-secondary-light) !important;
+}
+
+.border-secondary-dark {
+  border-color: var(--color-secondary-dark) !important;
+}
+
+// 成功・エラー・警告・情報
+.border-success {
+  border-color: var(--color-success) !important;
+}
+
+.border-error {
+  border-color: var(--color-error) !important;
+}
+
+.border-warning {
+  border-color: var(--color-warning) !important;
+}
+
+.border-info {
+  border-color: var(--color-info) !important;
+}
+
+// グレースケール
+.border-white {
+  border-color: var(--color-white) !important;
+}
+
+.border-black {
+  border-color: var(--color-black) !important;
+}
+
+.border-gray-100 {
+  border-color: var(--color-gray-100) !important;
+}
+
+.border-gray-200 {
+  border-color: var(--color-gray-200) !important;
+}
+
+.border-gray-300 {
+  border-color: var(--color-gray-300) !important;
+}
+
+.border-gray-400 {
+  border-color: var(--color-gray-400) !important;
+}
+
+.border-gray-500 {
+  border-color: var(--color-gray-500) !important;
+}
+
+.border-gray-600 {
+  border-color: var(--color-gray-600) !important;
+}
+
+.border-gray-700 {
+  border-color: var(--color-gray-700) !important;
+}
+
+.border-gray-800 {
+  border-color: var(--color-gray-800) !important;
+}
+
+.border-gray-900 {
+  border-color: var(--color-gray-900) !important;
+}
+
+// 透明ボーダー
+.border-transparent {
+  border-color: transparent !important;
+}
+
+// -----------------------------------------------------------------------------
+// アウトライン色ユーティリティ
+// -----------------------------------------------------------------------------
+
+.outline-primary {
+  outline-color: var(--color-primary) !important;
+}
+
+.outline-secondary {
+  outline-color: var(--color-secondary) !important;
+}
+
+.outline-success {
+  outline-color: var(--color-success) !important;
+}
+
+.outline-error {
+  outline-color: var(--color-error) !important;
+}
+
+.outline-warning {
+  outline-color: var(--color-warning) !important;
+}
+
+.outline-info {
+  outline-color: var(--color-info) !important;
+}
+
+// -----------------------------------------------------------------------------
+// ホバー状態の色ユーティリティ
+// -----------------------------------------------------------------------------
+
+// 背景色ホバー
+.hover\:bg-primary:hover {
+  background-color: var(--color-primary) !important;
+}
+
+.hover\:bg-primary-light:hover {
+  background-color: var(--color-primary-light) !important;
+}
+
+.hover\:bg-primary-dark:hover {
+  background-color: var(--color-primary-dark) !important;
+}
+
+.hover\:bg-secondary:hover {
+  background-color: var(--color-secondary) !important;
+}
+
+.hover\:bg-secondary-light:hover {
+  background-color: var(--color-secondary-light) !important;
+}
+
+.hover\:bg-secondary-dark:hover {
+  background-color: var(--color-secondary-dark) !important;
+}
+
+.hover\:bg-gray-100:hover {
+  background-color: var(--color-gray-100) !important;
+}
+
+.hover\:bg-gray-200:hover {
+  background-color: var(--color-gray-200) !important;
+}
+
+.hover\:bg-gray-300:hover {
+  background-color: var(--color-gray-300) !important;
+}
+
+// 文字色ホバー
+.hover\:text-primary:hover {
+  color: var(--color-primary) !important;
+}
+
+.hover\:text-primary-light:hover {
+  color: var(--color-primary-light) !important;
+}
+
+.hover\:text-primary-dark:hover {
+  color: var(--color-primary-dark) !important;
+}
+
+.hover\:text-secondary:hover {
+  color: var(--color-secondary) !important;
+}
+
+.hover\:text-white:hover {
+  color: var(--color-white) !important;
+}
+
+.hover\:text-black:hover {
+  color: var(--color-black) !important;
+}
+
+// -----------------------------------------------------------------------------
+// フォーカス状態の色ユーティリティ
+// -----------------------------------------------------------------------------
+
+.focus\:bg-primary:focus {
+  background-color: var(--color-primary) !important;
+}
+
+.focus\:text-primary:focus {
+  color: var(--color-primary) !important;
+}
+
+.focus\:border-primary:focus {
+  border-color: var(--color-primary) !important;
+}
+
+.focus\:outline-primary:focus {
+  outline-color: var(--color-primary) !important;
+}
+
+// -----------------------------------------------------------------------------
+// レスポンシブ対応
+// -----------------------------------------------------------------------------
+
+@media (min-width: 768px) {
+  .md\:bg-primary {
+    background-color: var(--color-primary) !important;
+  }
+  
+  .md\:text-primary {
+    color: var(--color-primary) !important;
+  }
+  
+  .md\:border-primary {
+    border-color: var(--color-primary) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:bg-primary {
+    background-color: var(--color-primary) !important;
+  }
+  
+  .lg\:text-primary {
+    color: var(--color-primary) !important;
+  }
+  
+  .lg\:border-primary {
+    border-color: var(--color-primary) !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:bg-primary {
+    background-color: var(--color-primary) !important;
+  }
+  
+  .xl\:text-primary {
+    color: var(--color-primary) !important;
+  }
+  
+  .xl\:border-primary {
+    border-color: var(--color-primary) !important;
+  }
+}
