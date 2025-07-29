@@ -1,0 +1,108 @@
+// ライトモード（デフォルト）
+:root {
+  // カラーシステム
+  --color-primary: #{$primary};
+  --color-secondary: #{$secondary};
+  --color-success: #{$success};
+  --color-danger: #{$danger};
+  --color-warning: #{$warning};
+  --color-info: #{$info};
+  
+  // テキストカラー
+  --color-text-primary: #{$text-primary};
+  --color-text-secondary: #{$text-secondary};
+  --color-text-muted: #{$text-muted};
+  --color-text-inverse: #{$white};
+  
+  // 背景色
+  --color-bg-primary: #{$bg-primary};
+  --color-bg-secondary: #{$bg-secondary};
+  --color-bg-muted: #{$bg-muted};
+  --color-bg-inverse: #{$gray-900};
+  
+  // ボーダー
+  --color-border: #{$border-color};
+  --color-border-light: #{$gray-100};
+  --color-border-dark: #{$gray-300};
+  
+  // シャドウ
+  --shadow-sm: #{$shadow-sm};
+  --shadow: #{$shadow};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+  
+  // 固定値（テーマに依存しない）
+  --font-sans: #{$font-sans};
+  --font-serif: #{$font-serif};
+  --font-mono: #{$font-mono};
+  
+  --border-radius-sm: #{$border-radius-sm};
+  --border-radius: #{$border-radius};
+  --border-radius-md: #{$border-radius-md};
+  --border-radius-lg: #{$border-radius-lg};
+  --border-radius-xl: #{$border-radius-xl};
+  --border-radius-full: #{$border-radius-full};
+  
+  --transition-fast: #{$transition-fast};
+  --transition-base: #{$transition-base};
+  --transition-slow: #{$transition-slow};
+}
+
+// ダークモード
+[data-theme="dark"] {
+  // テキストカラー（反転）
+  --color-text-primary: #{$white};
+  --color-text-secondary: #{$gray-300};
+  --color-text-muted: #{$gray-400};
+  --color-text-inverse: #{$gray-900};
+  
+  // 背景色（反転）
+  --color-bg-primary: #{$gray-900};
+  --color-bg-secondary: #{$gray-800};
+  --color-bg-muted: #{$gray-700};
+  --color-bg-inverse: #{$white};
+  
+  // ボーダー（ダーク用）
+  --color-border: #{$gray-700};
+  --color-border-light: #{$gray-800};
+  --color-border-dark: #{$gray-600};
+  
+  // シャドウ（ダーク用）
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+// システム設定を自動検出
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    // ユーザーがライトモードを明示的に選択していない場合のみ
+    --color-text-primary: #{$white};
+    --color-text-secondary: #{$gray-300};
+    --color-text-muted: #{$gray-400};
+    --color-text-inverse: #{$gray-900};
+    
+    --color-bg-primary: #{$gray-900};
+    --color-bg-secondary: #{$gray-800};
+    --color-bg-muted: #{$gray-700};
+    --color-bg-inverse: #{$white};
+    
+    --color-border: #{$gray-700};
+    --color-border-light: #{$gray-800};
+    --color-border-dark: #{$gray-600};
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// テーマ切り替え時のスムーズアニメーション
+* {
+  transition: 
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
